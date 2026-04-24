@@ -1,36 +1,60 @@
-\# ESP32 FreeRTOS MQTT Telemetry
+# ESP32 FreeRTOS MQTT Telemetry
 
+## Overview
+Embedded firmware project built using ESP-IDF and FreeRTOS.
+The ESP32 connects to WiFi, publishes telemetry to an MQTT broker, and subscribes to command messages.
 
+---
 
-\## Overview
+## Architecture
 
-ESP32 firmware project using ESP-IDF and MQTT.
+ESP32 (ESP-IDF + FreeRTOS)
+│
+├── NVS Initialization
+├── WiFi (Station Mode)
+├── MQTT Client
+│   ├── Telemetry Publish (5s interval)
+│   └── Command Subscribe
+│
+└── Serial Debug Logging
 
+MQTT Broker: broker.hivemq.com
 
+Subscribers:
+- Node-RED Dashboard
+- MQTT Explorer
 
-\## Features
+---
 
-\- WiFi connection
+## MQTT Topics
 
-\- MQTT publish every 5 seconds
+Telemetry:
+edgepulse/manjunatha144/device_001/telemetry
 
-\- Command subscription
+Command:
+edgepulse/manjunatha144/device_001/cmd
 
-\- Sequence number tracking
+---
 
-\- JSON telemetry payload
+## Telemetry Payload Example
 
+{
+  "device_id": "device_001",
+  "seq": 15,
+  "uptime_ms": 85745,
+  "temp": 27.5
+}
 
+- seq increments every publish
+- uptime_ms shows device running time
+- temp currently simulated value
 
-\## Broker
+---
 
-broker.hivemq.com
+## Project Structure
 
-
-
-\## Topics
-
-Telemetry: edgepulse/manjunatha144/device\_001/telemetry
-
-Command: edgepulse/manjunatha144/device\_001/cmd
-
+firmware/        → ESP32 firmware (ESP-IDF)
+simulator/       → Python MQTT simulator (Phase 1)
+node-red/        → Node-RED flow exports
+docs/            → Setup and testing notes
+screenshots/     → Dashboard and logs
