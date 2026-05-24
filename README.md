@@ -254,6 +254,10 @@ idf.py -p PORT flash
 ```bash
 idf.py monitor
 ```
+## Serial Monitor Output
+
+![Serial Monitor](screenshots/serial_monitor.png)
+
 ## Author
 
 ### Manjunatha H
