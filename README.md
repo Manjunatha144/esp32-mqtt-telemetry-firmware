@@ -201,14 +201,6 @@ Implemented unique namespace-based MQTT topics.
   "reconnect":0
 }
 ```
-## Future Improvements
-
-- OTA firmware update support
-- TLS-secured MQTT communication
-- Sensor integration
-- Deep sleep optimization
-- Watchdog timer integration
-- Multi-device scalability
 ## MQTT Topics
 
 Broker:
