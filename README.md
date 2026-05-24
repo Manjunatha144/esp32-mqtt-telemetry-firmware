@@ -111,3 +111,20 @@ Power On
 → MQTT Broker
 → Node-RED Dashboard
 ```
+## Engineering Decisions
+
+### Why Queue-Based Architecture?
+
+Telemetry generation was decoupled from MQTT publishing to avoid blocking application logic during network instability and reconnect conditions.
+
+---
+
+### Why EventGroups?
+
+EventGroups were used for synchronization between WiFi connection state and MQTT startup sequence.
+
+---
+
+### Why NVS?
+
+NVS allows runtime configuration persistence across reboot cycles without recompilation.
