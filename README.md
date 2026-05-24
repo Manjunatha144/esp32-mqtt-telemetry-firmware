@@ -183,3 +183,28 @@ Implemented unique namespace-based MQTT topics.
 ├── diagrams/
 └── README.md
 ```
+## Tools & Technologies
+
+### Embedded Platforms
+- ESP32
+- ESP-IDF v6.0
+
+### RTOS
+- FreeRTOS
+
+### Communication Protocols
+- MQTT
+- UART
+- SPI
+- I2C
+
+### Networking
+- WiFi
+- TCP/IP
+
+### Development Tools
+- Git
+- GitHub
+- Node-RED
+- MQTT Explorer
+- ESP-IDF Monitor
