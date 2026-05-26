@@ -275,7 +275,4 @@ https://github.com/Manjunatha144/mqtt-telemetry-dashboard-system
 
 Embedded and IoT Firmware Developer
 
-GitHub:
-```text
-https://github.com/Manjunatha144
-```
+
